@@ -1,10 +1,17 @@
 <template>
 	<div class="container">
-		<h1 class="mb-4">App Meteo Vue.js</h1>
+		<h1 class="mb-4">La meteo pour un sejour?</h1>
 
 		<div class="form-groupe mb-5">
 			<label for="position">Entrez le nom d'une ville</label>
-			<input type="text" id="position" class="form-control" v-model="requete" v-on:keypress="goMeteo" />
+			<input
+				type="text"
+				id="position"
+				class="form-control"
+				v-model="requete"
+				placeholder="Une destination?"
+				v-on:keypress="goMeteo"
+			/>
 			<!-- le v-on:keypress="goMeteo" peut etre remplacer par @keypress.enter= "goMeteo" , ce qui va permettre d'enlever le if dans methods et tot ce qui est lié a l'argument e -->
 
 			<!-- <h3>{{ requete }}</h3>
